@@ -1,79 +1,150 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4; /* Light grey background */
-    color: #333; /* Dark grey text */
+/* Custom CSS for The Arsenal Minute Website - VERY COMPACT VERSION */
+
+/* Define your brand colors and font as CSS variables for easy customization */
+:root {
+    --primary-text-color: #DC0000; /* Arsenal Red for main text */
+    --faint-green-background: #e6ffe6; /* Faint green for 'Players In' */
+    --faint-red-background: #ffe6e6; /* Faint red for 'Players Out' */
+    --general-background-color: #f8f8f8; /* Very light grey for the page background */
+    --container-background-color: #ffffff; /* White for the main content box */
+    --body-text-color: #333333; /* Dark grey for general body text */
+    --footer-text-color: #666666; /* Lighter grey for footer text */
+    --font-family-base: 'Georgia', serif; /* Basic serif font */
 }
 
+/* Basic Reset & Global Styles */
+body {
+    font-family: var(--font-family-base);
+    line-height: 1.4; /* Reduced line height for compactness */
+    margin: 0;
+    padding: 10px; /* Minimal padding around the edges */
+    background-color: var(--general-background-color);
+    color: var(--body-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top */
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto; /* Allow scrolling if content slightly exceeds viewport */
+}
+
+/* Main Container for the website content */
 .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    padding: 20px 0;
-    text-align: center; /* Center content within the container */
+    max-width: 500px; /* Significantly reduced max-width for very compact look */
+    width: 100%;
+    background-color: var(--container-background-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    border-radius: 6px; /* Slightly less rounded corners */
+    padding: 20px; /* Reduced internal padding */
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+    margin-bottom: 20px; /* Reduced margin */
 }
 
 h1 {
-    color: #DC0000; /* Arsenal Red */
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    color: var(--primary-text-color);
+    font-size: 2em; /* Smaller main title */
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 0.9em; /* Smaller header paragraph */
+    color: var(--body-text-color);
+}
+
+/* Section Styles (common for player lists and newsletter) */
+section {
+    padding: 15px; /* Reduced section padding */
+    border-radius: 4px; /* Less rounded corners */
+    margin-bottom: 15px; /* Reduced margin */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03); /* Very subtle shadow */
 }
 
 h2 {
-    color: #004D98; /* Arsenal Blue */
-    margin-top: 30px;
-    margin-bottom: 10px;
+    color: var(--primary-text-color);
+    font-size: 1.5em; /* Smaller section headings */
+    margin-top: 0;
+    margin-bottom: 10px; /* Reduced margin */
+    font-weight: 700;
 }
 
-.players-section ul {
-    list-style: none; /* No bullets */
-    padding: 0;
+section p {
+    font-size: 0.9em; /* Smaller paragraph size */
+    line-height: 1.4;
+    color: var(--body-text-color);
 }
 
-.players-section li {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    margin-bottom: 8px;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1.1em;
+/* Specific Section Backgrounds */
+.players-in-section {
+    background-color: var(--faint-green-background);
+}
+
+.players-out-section {
+    background-color: var(--faint-red-background);
 }
 
 .newsletter-section {
-    background-color: #e0f2f7; /* Light blue for newsletter section */
-    padding: 25px;
-    margin-top: 40px;
-    border-radius: 8px;
-    border: 1px solid #cceeff;
+    background-color: var(--general-background-color);
+    border: 1px solid #e0e0e0;
 }
 
-.newsletter-section p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
+/* Substack Embed Container (for centering the iframe) */
+.substack-embed-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px; /* Reduced space above embed */
+    margin-bottom: 5px; /* Reduced space below embed */
 }
 
-.button {
-    display: inline-block;
-    background-color: #004D98; /* Arsenal Blue */
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
+.substack-embed-container iframe {
+    /* Substack iframe dimensions are fixed, but we ensure it scales down */
+    max-width: 100%; /* Important for responsiveness */
+    height: auto; /* Adjust height proportionally */
+    min-height: 200px; /* Slightly smaller minimum height */
+    border-radius: 6px; /* Slightly less rounded corners for iframe */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* Softer shadow */
 }
 
-.button:hover {
-    background-color: #DC0000; /* Arsenal Red on hover */
-}
-
+/* Footer Styles */
 footer {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    font-size: 0.9em;
+    margin-top: 20px; /* Reduced margin */
+    padding-top: 10px; /* Reduced padding */
+    border-top: 1px solid #e0e0e0;
+    color: var(--footer-text-color);
+    font-size: 0.75em; /* Smallest footer text */
+    line-height: 1.3;
+}
+
+/* Responsive adjustments for even smaller screens */
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+    .container {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+    section {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    section p {
+        font-size: 0.85em;
+    }
+    .substack-embed-container iframe {
+        min-height: 180px; /* Even smaller min-height for very small screens */
+    }
+    footer {
+        font-size: 0.7em;
+    }
 }

@@ -6,8 +6,8 @@
 
 /* Define your brand colors and font as CSS variables for easy customization */
 :root {
-    --primary-brand-color: #ef0107; /* Default: Arsenal Red - Change this! */
-    --secondary-brand-color: #16a34a; /* Default: Arsenal Blue - Change this! */
+    --primary-brand-color: #DC0000; /* Default: Arsenal Red - Change this! */
+    --secondary-brand-color: #004D98; /* Default: Arsenal Blue - Change this! */
     --background-color-page: #f0f2f5; /* Light grey background for the page */
     --background-color-container: #ffffff; /* White background for the main content box */
     --background-color-players-in: #e0f7fa; /* Light blue for 'Players In' section */
@@ -37,71 +37,69 @@ body {
     justify-content: center; /* For centering content horizontally */
     align-items: center; /* For centering content vertically */
     min-height: 100vh; /* Ensure body takes full viewport height */
-    padding: 40px 20px; /* Add some padding on smaller screens */
+    padding: 20px; /* Reduced padding on page edges */
     box-sizing: border-box; /* Include padding in element's total width and height */
 }
 
 /* Main Container for the website content */
 .container {
-    max-width: 960px; /* Max width for larger screens */
+    max-width: 700px; /* Reduced max-width for a more compact feel */
     width: 100%; /* Take full width on smaller screens */
     background-color: var(--background-color-container);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    border-radius: 10px; /* Rounded corners */
-    padding: 40px; /* Internal padding */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Slightly softer shadow */
+    border-radius: 8px; /* Slightly less rounded corners */
+    padding: 30px; /* Reduced internal padding */
     text-align: center; /* Center content within the container */
-    box-sizing: border-box; /* Include padding in element's total width and height */
+    box-sizing: border-box;
 }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .container {
-        padding: 20px;
-        margin: 0 10px; /* Add some margin on very small screens */
+        padding: 15px; /* Further reduced padding on small screens */
     }
     h1 {
-        font-size: 2.5em; /* Adjust font size for smaller screens */
+        font-size: 2.2em; /* Adjusted font size for smaller screens */
     }
     h2 {
-        font-size: 1.8em; /* Adjust font size for smaller screens */
+        font-size: 1.6em; /* Adjusted font size for smaller screens */
     }
-    .newsletter-button {
-        font-size: 1em; /* Adjust button font size for smaller screens */
-        padding: 10px 20px;
+    .newsletter-section p {
+        font-size: 0.95em; /* Slightly smaller text in newsletter section */
     }
 }
 
 
 /* Header Styles */
 header {
-    margin-bottom: 40px;
+    margin-bottom: 30px; /* Reduced margin */
 }
 
 h1 {
     color: var(--primary-brand-color);
-    font-size: 3.5em; /* Larger main title */
-    margin-bottom: 10px;
-    font-weight: 700; /* Bold */
+    font-size: 3em; /* Reduced main title size */
+    margin-bottom: 8px; /* Reduced margin */
+    font-weight: 700;
 }
 
 header p {
-    font-size: 1.1em;
+    font-size: 1em; /* Reduced header paragraph size */
     color: var(--text-color-light);
 }
 
 /* Section Styles (common for player lists and newsletter) */
 section {
-    padding: 30px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Subtle shadow for sections */
+    padding: 25px; /* Reduced section padding */
+    border-radius: 6px; /* Slightly less rounded corners */
+    margin-bottom: 25px; /* Reduced margin */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.04); /* Even more subtle shadow for sections */
 }
 
 h2 {
-    font-size: 2.2em;
+    font-size: 2em; /* Reduced subheading size */
     margin-top: 0;
-    margin-bottom: 20px;
-    font-weight: 600; /* Semi-bold */
+    margin-bottom: 15px; /* Reduced margin */
+    font-weight: 600;
 }
 
 /* Specific Player Section Styles */
@@ -123,32 +121,32 @@ h2 {
 
 /* List Styles for players */
 ul {
-    list-style: none; /* No bullets */
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
 li {
     background-color: var(--background-color-container);
-    border: 1px solid #eeeeee; /* Light border */
-    margin-bottom: 10px;
-    padding: 15px;
-    border-radius: 5px;
-    font-size: 1.1em;
-    display: flex; /* Use flexbox for alignment */
-    justify-content: space-between; /* Space out content */
-    align-items: center; /* Vertically align content */
+    border: 1px solid #eeeeee;
+    margin-bottom: 8px; /* Reduced margin */
+    padding: 12px; /* Reduced padding */
+    border-radius: 4px; /* Slightly less rounded */
+    font-size: 1em; /* Reduced list item font size */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: var(--text-color-dark);
 }
 
 li:last-child {
-    margin-bottom: 0; /* No margin after the last list item */
+    margin-bottom: 0;
 }
 
 /* Newsletter Section Styles */
 .newsletter-section {
     background-color: var(--background-color-newsletter);
-    border: 1px solid #dddddd; /* Lighter border for newsletter section */
+    border: 1px solid #dddddd;
 }
 
 .newsletter-section h2 {
@@ -156,37 +154,33 @@ li:last-child {
 }
 
 .newsletter-section p {
-    font-size: 1.1em;
-    margin-bottom: 25px;
+    font-size: 1em; /* Adjusted paragraph size */
+    margin-bottom: 20px; /* Reduced margin */
     color: var(--text-color-light);
 }
 
-/* Newsletter Button Styles */
-.newsletter-button {
-    display: inline-block; /* Allows padding and margin */
-    background-color: var(--primary-brand-color); /* Primary brand color for button */
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none; /* Remove underline */
-    border-radius: 50px; /* Very rounded button */
-    font-weight: 700; /* Bold text */
-    font-size: 1.2em;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Button shadow */
+/* Substack Embed Container (for centering the iframe) */
+.substack-embed-container {
+    display: flex;
+    justify-content: center; /* Center the iframe */
+    margin-top: 20px; /* Add some space above it */
+    margin-bottom: 10px; /* Add some space below it */
 }
 
-.newsletter-button:hover {
-    background-color: var(--secondary-brand-color); /* Secondary brand color on hover */
-    transform: translateY(-2px); /* Slight lift effect on hover */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+.substack-embed-container iframe {
+    max-width: 100%; /* Ensure it doesn't overflow its parent */
+    height: auto; /* Adjust height proportionally */
+    min-height: 250px; /* Ensure a minimum height for the embed */
+    border-radius: 8px; /* Add rounded corners to the iframe */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
+
 
 /* Footer Styles */
 footer {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #e0e0e0; /* Light line above footer */
+    margin-top: 30px; /* Reduced margin */
+    padding-top: 15px; /* Reduced padding */
+    border-top: 1px solid #e0e0e0;
     color: var(--text-color-light);
-    font-size: 0.9em;
+    font-size: 0.85em; /* Slightly smaller footer text */
 }
-

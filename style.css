@@ -2,7 +2,7 @@
 
 /* Define your brand colors and font as CSS variables for easy customization */
 :root {
-    --primary-brand-color: #C8102E; /* A slightly darker, richer Arsenal Red (kept for subtle use) */
+    --primary-brand-color: #C8102E; /* A slightly darker, richer Arsenal Red */
     --secondary-brand-color: #00366D; /* A deeper Arsenal Blue for accents */
     --faint-green-background: #eafbea; /* Softer green */
     --faint-red-background: #fbeaea; /* Softer red */
@@ -51,7 +51,7 @@ header {
 }
 
 h1 {
-    color: var(--text-color-dark); /* Changed to neutral dark grey to remove "red box" feel */
+    color: var(--text-color-dark); /* Remains neutral dark grey */
     font-size: 1.7em; /* Slightly smaller main title for mobile */
     margin-bottom: 6px; /* Reduced margin */
     font-weight: 700;
@@ -65,15 +65,15 @@ header p {
 
 /* Section Styles (common for player lists and newsletter) */
 section {
-    padding: 12px; /* Reduced section padding */
+    padding: 10px; /* REDUCED SECTION PADDING for in/out boxes */
     border-radius: var(--border-radius-base);
-    margin-bottom: 15px; /* Reduced spacing between sections */
+    margin-bottom: 12px; /* REDUCED spacing between sections */
     box-shadow: none; /* Removed section shadow for a flatter, cleaner look */
     border: 1px solid #f0f0f0; /* Added a very light border for definition */
 }
 
 h2 {
-    color: var(--text-color-dark); /* Changed to neutral dark grey */
+    color: var(--text-color-dark); /* Remains neutral dark grey */
     font-size: 1.2em; /* Slightly smaller heading */
     margin-top: 0;
     margin-bottom: 8px; /* Reduced spacing below heading */
@@ -96,28 +96,43 @@ section p {
     background-color: var(--faint-red-background);
 }
 
+/* Newsletter Section Styles (NOW THE "RED BOX") */
 .newsletter-section {
-    background-color: var(--general-background-color);
-    border: 1px solid #e9ecef;
+    background-color: var(--primary-brand-color); /* Set to Arsenal Red */
+    border: none; /* No border needed on this section */
+    padding: 15px; /* Adjust padding for visual balance */
+    margin-top: 10px; /* REDUCED PADDING ABOVE THIS BOX */
+    margin-bottom: 15px; /* Reduced spacing below this section */
 }
+
+/* Text within the Newsletter Section */
+.newsletter-section h2,
+.newsletter-section p {
+    color: white; /* Make text white for contrast */
+    font-weight: 400; /* Normal weight for paragraphs */
+}
+.newsletter-section h2 {
+    font-size: 1.4em; /* Slightly larger heading for impact */
+}
+
 
 /* Subscribe Link Styling (modern button) */
 .subscribe-link {
     display: inline-block;
-    background-color: var(--primary-brand-color); /* Retaining red for CTA button */
-    color: white;
+    background-color: white; /* White button on red background */
+    color: var(--primary-brand-color); /* Red text on white button */
     padding: 8px 15px; /* More compact button padding */
     text-decoration: none;
     border-radius: 20px; /* Slightly less rounded pill shape */
     font-weight: 700;
     font-size: 0.85em; /* Smaller text for compactness */
-    margin-top: 12px; /* Space above button */
+    margin-top: 15px; /* Space above button */
     transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Softer button shadow */
 }
 
 .subscribe-link:hover {
-    background-color: var(--secondary-brand-color);
+    background-color: #f0f0f0; /* Light grey on hover */
     transform: translateY(-1px);
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
@@ -140,8 +155,8 @@ section p {
 
 /* Footer Styles */
 footer {
-    margin-top: 20px; /* Reduced margin */
-    padding-top: 10px; /* Reduced padding */
+    margin-top: 15px; /* REDUCED margin */
+    padding-top: 8px; /* REDUCED padding */
     border-top: 1px solid #e9ecef;
     color: var(--text-color-light);
     font-size: 0.7em;
@@ -163,7 +178,7 @@ footer {
         font-size: 1.1em;
     }
     section {
-        padding: 10px;
+        padding: 8px; /* Further reduced padding on small screens */
         margin-bottom: 10px;
     }
     section p {

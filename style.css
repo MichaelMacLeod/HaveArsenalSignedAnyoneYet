@@ -108,7 +108,7 @@ section p {
 /* Text within the Newsletter Section */
 .newsletter-section h2,
 .newsletter-section p {
-    color: black; /* Changed to BLACK text for contrast */
+    color: white; /* Changed to BLACK text for contrast */
     font-weight: 400; /* Normal weight for paragraphs */
 }
 .newsletter-section h2 {

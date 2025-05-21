@@ -1,0 +1,192 @@
+/*
+******************************************************************
+* CUSTOM BRANDING STYLES - EDIT THESE TO MATCH YOUR NEWSLETTER *
+******************************************************************
+*/
+
+/* Define your brand colors and font as CSS variables for easy customization */
+:root {
+    --primary-brand-color: #ef0107; /* Default: Arsenal Red - Change this! */
+    --secondary-brand-color: #16a34a; /* Default: Arsenal Blue - Change this! */
+    --background-color-page: #f0f2f5; /* Light grey background for the page */
+    --background-color-container: #ffffff; /* White background for the main content box */
+    --background-color-players-in: #e0f7fa; /* Light blue for 'Players In' section */
+    --background-color-players-out: #ffe0e0; /* Light red for 'Players Out' section */
+    --background-color-newsletter: #f8f8f8; /* Very light grey for newsletter section */
+    --text-color-dark: #333333; /* Dark grey for general text */
+    --text-color-light: #666666; /* Lighter grey for secondary text */
+    --font-family-base: 'Inter', sans-serif; /* Change 'Inter' to your desired font, e.g., 'Roboto', sans-serif; */
+}
+
+/*
+******************************************************************
+* END OF CUSTOM BRANDING STYLES                                  *
+******************************************************************
+*/
+
+
+/* Basic Reset & Global Styles */
+body {
+    font-family: var(--font-family-base);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color-page);
+    color: var(--text-color-dark);
+    display: flex; /* For centering content */
+    justify-content: center; /* For centering content horizontally */
+    align-items: center; /* For centering content vertically */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    padding: 40px 20px; /* Add some padding on smaller screens */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+/* Main Container for the website content */
+.container {
+    max-width: 960px; /* Max width for larger screens */
+    width: 100%; /* Take full width on smaller screens */
+    background-color: var(--background-color-container);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-radius: 10px; /* Rounded corners */
+    padding: 40px; /* Internal padding */
+    text-align: center; /* Center content within the container */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 0 10px; /* Add some margin on very small screens */
+    }
+    h1 {
+        font-size: 2.5em; /* Adjust font size for smaller screens */
+    }
+    h2 {
+        font-size: 1.8em; /* Adjust font size for smaller screens */
+    }
+    .newsletter-button {
+        font-size: 1em; /* Adjust button font size for smaller screens */
+        padding: 10px 20px;
+    }
+}
+
+
+/* Header Styles */
+header {
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: var(--primary-brand-color);
+    font-size: 3.5em; /* Larger main title */
+    margin-bottom: 10px;
+    font-weight: 700; /* Bold */
+}
+
+header p {
+    font-size: 1.1em;
+    color: var(--text-color-light);
+}
+
+/* Section Styles (common for player lists and newsletter) */
+section {
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Subtle shadow for sections */
+}
+
+h2 {
+    font-size: 2.2em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 600; /* Semi-bold */
+}
+
+/* Specific Player Section Styles */
+.players-in-section {
+    background-color: var(--background-color-players-in);
+}
+
+.players-in-section h2 {
+    color: var(--secondary-brand-color);
+}
+
+.players-out-section {
+    background-color: var(--background-color-players-out);
+}
+
+.players-out-section h2 {
+    color: var(--primary-brand-color);
+}
+
+/* List Styles for players */
+ul {
+    list-style: none; /* No bullets */
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: var(--background-color-container);
+    border: 1px solid #eeeeee; /* Light border */
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space out content */
+    align-items: center; /* Vertically align content */
+    color: var(--text-color-dark);
+}
+
+li:last-child {
+    margin-bottom: 0; /* No margin after the last list item */
+}
+
+/* Newsletter Section Styles */
+.newsletter-section {
+    background-color: var(--background-color-newsletter);
+    border: 1px solid #dddddd; /* Lighter border for newsletter section */
+}
+
+.newsletter-section h2 {
+    color: var(--text-color-dark);
+}
+
+.newsletter-section p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    color: var(--text-color-light);
+}
+
+/* Newsletter Button Styles */
+.newsletter-button {
+    display: inline-block; /* Allows padding and margin */
+    background-color: var(--primary-brand-color); /* Primary brand color for button */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none; /* Remove underline */
+    border-radius: 50px; /* Very rounded button */
+    font-weight: 700; /* Bold text */
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Button shadow */
+}
+
+.newsletter-button:hover {
+    background-color: var(--secondary-brand-color); /* Secondary brand color on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0; /* Light line above footer */
+    color: var(--text-color-light);
+    font-size: 0.9em;
+}
+

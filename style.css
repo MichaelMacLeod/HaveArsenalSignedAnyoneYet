@@ -9,7 +9,7 @@
     --container-background-color: #ffffff; /* White for the main content box */
     --body-text-color: #333333; /* Dark grey for general body text */
     --footer-text-color: #666666; /* Lighter grey for footer text */
-    --font-family-base: 'Georgia', serif; /* Basic serif font */
+    --font-family-base: 'Times New Roman', Times, serif; /* Changed to Times New Roman */
 }
 
 /* Basic Reset & Global Styles */
@@ -67,14 +67,14 @@ section {
 
 h2 {
     color: var(--primary-text-color);
-    font-size: 1.5em; /* Smaller section headings */
+    font-size: 1.4em; /* SLIGHTLY REDUCED section headings font size */
     margin-top: 0;
     margin-bottom: 10px; /* Reduced margin */
     font-weight: 700;
 }
 
 section p {
-    font-size: 0.9em; /* Smaller paragraph size */
+    font-size: 1em; /* SLIGHTLY INCREASED paragraph size for results */
     line-height: 1.4;
     color: var(--body-text-color);
 }
@@ -132,14 +132,14 @@ footer {
         font-size: 1.8em;
     }
     h2 {
-        font-size: 1.3em;
+        font-size: 1.2em; /* Adjusted for very small screens */
     }
     section {
         padding: 10px;
         margin-bottom: 10px;
     }
     section p {
-        font-size: 0.85em;
+        font-size: 0.9em; /* Adjusted for very small screens */
     }
     .substack-embed-container iframe {
         min-height: 180px; /* Even smaller min-height for very small screens */

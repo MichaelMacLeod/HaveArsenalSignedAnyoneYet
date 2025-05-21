@@ -100,9 +100,9 @@ section p {
 .newsletter-section {
     background-color: var(--primary-brand-color); /* Set to Arsenal Red */
     border: none; /* No border needed on this section */
-    padding: 15px; /* Adjust padding for visual balance */
+    padding: 10px; /* Adjust padding for visual balance */
     margin-top: 10px; /* REDUCED PADDING ABOVE THIS BOX */
-    margin-bottom: 15px; /* Reduced spacing below this section */
+    margin-bottom: 10px; /* Reduced spacing below this section */
 }
 
 /* Text within the Newsletter Section */

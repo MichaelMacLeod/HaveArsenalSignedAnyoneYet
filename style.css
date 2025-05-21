@@ -1,23 +1,25 @@
-/* Custom CSS for The Arsenal Minute Website - VERY COMPACT VERSION */
+/* Custom CSS for The Arsenal Minute Website - MODERN & ULTRA COMPACT VERSION */
 
 /* Define your brand colors and font as CSS variables for easy customization */
 :root {
-    --primary-text-color: #DC0000; /* Arsenal Red for main text */
+    --primary-brand-color: #DC0000; /* Arsenal Red for main headings, accents */
+    --secondary-brand-color: #004D98; /* Arsenal Blue for secondary accents (e.g., button hover) */
     --faint-green-background: #e6ffe6; /* Faint green for 'Players In' */
     --faint-red-background: #ffe6e6; /* Faint red for 'Players Out' */
-    --general-background-color: #f8f8f8; /* Very light grey for the page background */
-    --container-background-color: #ffffff; /* White for the main content box */
+    --general-background-color: #f0f2f5; /* A softer, modern light grey for the page background */
+    --container-background-color: #ffffff; /* Clean white for the main content box */
     --body-text-color: #333333; /* Dark grey for general body text */
-    --footer-text-color: #666666; /* Lighter grey for footer text */
-    --font-family-base: 'Times New Roman', Times, serif; /* Changed to Times New Roman */
+    --light-text-color: #555555; /* Slightly lighter grey for secondary text */
+    --footer-text-color: #777777; /* Even lighter grey for footer text */
+    --font-family-base: 'Times New Roman', Times, serif; /* Retaining Times New Roman */
 }
 
 /* Basic Reset & Global Styles */
 body {
     font-family: var(--font-family-base);
-    line-height: 1.4; /* Reduced line height for compactness */
+    line-height: 1.3; /* Further reduced line height for compactness */
     margin: 0;
-    padding: 10px; /* Minimal padding around the edges */
+    padding: 8px; /* Minimal padding around the edges for mobile fit */
     background-color: var(--general-background-color);
     color: var(--body-text-color);
     display: flex;
@@ -30,51 +32,52 @@ body {
 
 /* Main Container for the website content */
 .container {
-    max-width: 500px; /* Significantly reduced max-width for very compact look */
+    max-width: 360px; /* Significantly reduced max-width for iPhone screenshot fit */
     width: 100%;
     background-color: var(--container-background-color);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
-    border-radius: 6px; /* Slightly less rounded corners */
-    padding: 20px; /* Reduced internal padding */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Lighter, more modern shadow */
+    border-radius: 8px; /* Consistent rounded corners */
+    padding: 15px; /* Reduced internal padding */
     text-align: center;
     box-sizing: border-box;
 }
 
 /* Header Styles */
 header {
-    margin-bottom: 20px; /* Reduced margin */
+    margin-bottom: 18px; /* Reduced margin */
 }
 
 h1 {
-    color: var(--primary-text-color);
-    font-size: 2em; /* Smaller main title */
-    margin-bottom: 10px;
+    color: var(--primary-brand-color);
+    font-size: 1.8em; /* Smaller main title for mobile */
+    margin-bottom: 8px;
     font-weight: 700;
+    letter-spacing: -0.02em; /* Slightly tighter letter spacing */
 }
 
 header p {
-    font-size: 0.9em; /* Smaller header paragraph */
-    color: var(--body-text-color);
+    font-size: 0.85em; /* Smaller header paragraph */
+    color: var(--light-text-color);
 }
 
 /* Section Styles (common for player lists and newsletter) */
 section {
-    padding: 10px; /* Reduced section padding */
-    border-radius: 4px; /* Less rounded corners */
-    margin-bottom: 10px; /* Reduced margin */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03); /* Very subtle shadow */
+    padding: 12px; /* Reduced section padding */
+    border-radius: 6px; /* Consistent rounded corners */
+    margin-bottom: 15px; /* Reduced margin */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03); /* Very subtle shadow */
 }
 
 h2 {
-    color: var(--primary-text-color);
-    font-size: 1.4em; /* SLIGHTLY REDUCED section headings font size */
+    color: var(--primary-brand-color);
+    font-size: 1.3em; /* Slightly smaller section headings font size */
     margin-top: 0;
     margin-bottom: 10px; /* Reduced margin */
     font-weight: 700;
 }
 
 section p {
-    font-size: 1em; /* SLIGHTLY INCREASED paragraph size for results */
+    font-size: 0.95em; /* Slightly increased paragraph size for results */
     line-height: 1.4;
     color: var(--body-text-color);
 }
@@ -93,6 +96,28 @@ section p {
     border: 1px solid #e0e0e0;
 }
 
+/* Subscribe Link Styling (making it look like a modern button) */
+.subscribe-link {
+    display: inline-block; /* Allows padding and margin */
+    background-color: var(--primary-brand-color); /* Arsenal Red button */
+    color: white;
+    padding: 8px 15px; /* Compact padding */
+    text-decoration: none; /* Remove underline */
+    border-radius: 25px; /* Pill shape */
+    font-weight: 700;
+    font-size: 0.9em; /* Compact font size */
+    margin-top: 10px; /* Space above the button */
+    transition: background-color 0.2s ease, transform 0.2s ease; /* Smooth hover effects */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle button shadow */
+}
+
+.subscribe-link:hover {
+    background-color: var(--secondary-brand-color); /* Arsenal Blue on hover */
+    transform: translateY(-1px); /* Slight lift */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow */
+}
+
+
 /* Substack Embed Container (for centering the iframe) */
 .substack-embed-container {
     display: flex;
@@ -102,26 +127,25 @@ section p {
 }
 
 .substack-embed-container iframe {
-    /* Substack iframe dimensions are fixed, but we ensure it scales down */
     max-width: 100%; /* Important for responsiveness */
     height: auto; /* Adjust height proportionally */
-    min-height: 200px; /* Slightly smaller minimum height */
-    border-radius: 6px; /* Slightly less rounded corners for iframe */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    min-height: 160px; /* Reduced minimum height for iPhone fit */
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08); /* Softer shadow */
 }
 
 /* Footer Styles */
 footer {
-    margin-top: 20px; /* Reduced margin */
+    margin-top: 18px; /* Reduced margin */
     padding-top: 10px; /* Reduced padding */
     border-top: 1px solid #e0e0e0;
     color: var(--footer-text-color);
-    font-size: 0.75em; /* Smallest footer text */
-    line-height: 1.3;
+    font-size: 0.7em; /* Smallest footer text */
+    line-height: 1.2;
 }
 
-/* Responsive adjustments for even smaller screens */
-@media (max-width: 480px) {
+/* Responsive adjustments for very small screens (e.g., older iPhones) */
+@media (max-width: 375px) { /* Targeting typical iPhone SE/older iPhone widths */
     body {
         padding: 5px;
     }
@@ -129,22 +153,26 @@ footer {
         padding: 10px;
     }
     h1 {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
     h2 {
-        font-size: 1.2em; /* Adjusted for very small screens */
+        font-size: 1.1em;
     }
     section {
         padding: 10px;
         margin-bottom: 10px;
     }
     section p {
-        font-size: 0.9em; /* Adjusted for very small screens */
+        font-size: 0.9em;
+    }
+    .subscribe-link {
+        font-size: 0.85em;
+        padding: 6px 12px;
     }
     .substack-embed-container iframe {
-        min-height: 180px; /* Even smaller min-height for very small screens */
+        min-height: 140px; /* Even smaller min-height for very small screens */
     }
     footer {
-        font-size: 0.7em;
+        font-size: 0.65em;
     }
 }

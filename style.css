@@ -2,7 +2,7 @@ ext/* Custom CSS for The Arsenal Minute Website - MODERN & ULTRA COMPACT VERSION
 
 /* Define your brand colors and font as CSS variables for easy customization */
 :root {
-    --primary-brand-color: #ffffff; /* A slightly darker, richer Arsenal Red */
+    --primary-brand-color: #ef0107; /* A slightly darker, richer Arsenal Red */
     --secondary-brand-color: #00366D; /* A deeper Arsenal Blue for accents */
     --faint-green-background: #eafbea; /* Softer green */
     --faint-red-background: #fbeaea; /* Softer red */

@@ -41,6 +41,11 @@
             <a href="https://thearsenalminute.substack.com" target="_blank" rel="noopener noreferrer" class="newsletter-button">
                 Subscribe to The Arsenal Minute for free.
             </a>
+
+            <div class="substack-embed-container">
+                <iframe src="https://thearsenalminute.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+            </div>
+            </section>
         </section>
 
         <footer>

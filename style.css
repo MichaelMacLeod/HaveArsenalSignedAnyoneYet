@@ -59,9 +59,9 @@ header p {
 
 /* Section Styles (common for player lists and newsletter) */
 section {
-    padding: 15px; /* Reduced section padding */
+    padding: 10px; /* Reduced section padding */
     border-radius: 4px; /* Less rounded corners */
-    margin-bottom: 15px; /* Reduced margin */
+    margin-bottom: 10px; /* Reduced margin */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03); /* Very subtle shadow */
 }
 

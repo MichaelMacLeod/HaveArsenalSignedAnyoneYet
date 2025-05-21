@@ -1,4 +1,4 @@
-/* Custom CSS for The Arsenal Minute Website - MODERN & ULTRA COMPACT VERSION */
+ext/* Custom CSS for The Arsenal Minute Website - MODERN & ULTRA COMPACT VERSION */
 
 /* Define your brand colors and font as CSS variables for easy customization */
 :root {
@@ -73,7 +73,7 @@ section {
 }
 
 h2 {
-    color: var(--text-color-dark); /* Remains neutral dark grey */
+    color: var(--text-color-medium); /* Remains neutral dark grey */
     font-size: 1.2em; /* Slightly smaller heading */
     margin-top: 0;
     margin-bottom: 8px; /* Reduced spacing below heading */

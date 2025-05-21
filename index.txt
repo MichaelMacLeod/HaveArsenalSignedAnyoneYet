@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Have Arsenal Signed Anyone Yet?</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Have Arsenal Signed Anyone Yet?</h1>
+        </header>
+
+        <section class="players-in-section">
+            <h2>Players in:</h2>
+            <p>None so far. It's only May. Relax and trust the process.</p>
+        </section>
+
+        <section class="players-out-section">
+            <h2>Players out:</h2>
+            <p>No 100% confirmed departures yet.</p>
+        </section>
+
+        <section class="newsletter-section">
+            <h2>Escape the transfer rumour clickbait!</h2>
+            <p>Fans deserve facts. The Arsenal Minute is a free 7am daily newsletter containing nothing but verified Arsenal news from trusted sources. Written by an Islington-born Gooner with 20+ years of full-time professional media experience. I made The Arsenal Minute to save us all time this summer.</p>
+            <p>Subscribe to The Arsenal Minute for free.</p>
+            
+            <div class="substack-embed-container">
+                <iframe src="https://thearsenalminute.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 The Arsenal Minute. All rights reserved.</p>
+            <p>The Arsenal Minute: Today’s Arsenal news links in 60 seconds. The quickest way to follow the Arsenal. Free & daily.</p>
+        </footer>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Have Arsenal signed anyone yet?</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Have Arsenal Signed Anyone Yet?</h1>
+            <p>Your direct source for official Arsenal transfer news, cutting through the rumour mill.</p>
+        </header>
+
+        <section class="players-in-section">
+            <h2>Players in:</h2>
+            <ul id="playersInList">
+                <li> None so far, it’s only May. Relax and trust the process..</li>
+                <!-- Add more players like this:
+                <li>Declan Rice - £105m from West Ham</li>
+                <li>Kai Havertz - £65m from Chelsea</li>
+                -->
+            </ul>
+        </section>
+
+        <section class="players-out-section">
+            <h2>Players out:</h2>
+            <ul id="playersOutList">
+                <li> No 100% confirmed departures yet.</li>
+                <!-- Add more players like this:
+                <li>Granit Xhaka - To Bayer Leverkusen</li>
+                -->
+            </ul>
+        </section>
+
+        <section class="newsletter-section">
+            <h2>Escape the transfer rumour clickbait!</h2>
+            <p>Fans deserve facts. The Arsenal Minute is a free 7am daily newsletter containing nothing but verified Arsenal news from trusted sources. Written by an Islington-born Gooner with 20+ years of full-time professional media experience. I made The Arsenal Minute to save us all time this summer.</p>
+            <a href="https://thearsenalminute.substack.com" target="_blank" rel="noopener noreferrer" class="newsletter-button">
+                Subscribe to The Arsenal Minute for free.
+            </a>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 The Arsenal Minute. All rights reserved.</p>
+            <p>The Arsenal Minute: Today’s Arsenal news links in 60 seconds. The quickest way to follow the Arsenal. Free & daily.</p>
+        </footer>
+    </div>
+</body>
+</html>
+

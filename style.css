@@ -1,186 +1,79 @@
-/*
-******************************************************************
-* CUSTOM BRANDING STYLES - EDIT THESE TO MATCH YOUR NEWSLETTER *
-******************************************************************
-*/
-
-/* Define your brand colors and font as CSS variables for easy customization */
-:root {
-    --primary-brand-color: #DC0000; /* Default: Arsenal Red - Change this! */
-    --secondary-brand-color: #004D98; /* Default: Arsenal Blue - Change this! */
-    --background-color-page: #f0f2f5; /* Light grey background for the page */
-    --background-color-container: #ffffff; /* White background for the main content box */
-    --background-color-players-in: #e0f7fa; /* Light blue for 'Players In' section */
-    --background-color-players-out: #ffe0e0; /* Light red for 'Players Out' section */
-    --background-color-newsletter: #f8f8f8; /* Very light grey for newsletter section */
-    --text-color-dark: #333333; /* Dark grey for general text */
-    --text-color-light: #666666; /* Lighter grey for secondary text */
-    --font-family-base: 'Inter', sans-serif; /* Change 'Inter' to your desired font, e.g., 'Roboto', sans-serif; */
-}
-
-/*
-******************************************************************
-* END OF CUSTOM BRANDING STYLES                                  *
-******************************************************************
-*/
-
-
-/* Basic Reset & Global Styles */
 body {
-    font-family: var(--font-family-base);
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: var(--background-color-page);
-    color: var(--text-color-dark);
-    display: flex; /* For centering content */
-    justify-content: center; /* For centering content horizontally */
-    align-items: center; /* For centering content vertically */
-    min-height: 100vh; /* Ensure body takes full viewport height */
-    padding: 20px; /* Reduced padding on page edges */
-    box-sizing: border-box; /* Include padding in element's total width and height */
+    background-color: #f4f4f4; /* Light grey background */
+    color: #333; /* Dark grey text */
 }
 
-/* Main Container for the website content */
 .container {
-    max-width: 700px; /* Reduced max-width for a more compact feel */
-    width: 100%; /* Take full width on smaller screens */
-    background-color: var(--background-color-container);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Slightly softer shadow */
-    border-radius: 8px; /* Slightly less rounded corners */
-    padding: 30px; /* Reduced internal padding */
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
     text-align: center; /* Center content within the container */
-    box-sizing: border-box;
-}
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-    .container {
-        padding: 15px; /* Further reduced padding on small screens */
-    }
-    h1 {
-        font-size: 2.2em; /* Adjusted font size for smaller screens */
-    }
-    h2 {
-        font-size: 1.6em; /* Adjusted font size for smaller screens */
-    }
-    .newsletter-section p {
-        font-size: 0.95em; /* Slightly smaller text in newsletter section */
-    }
-}
-
-
-/* Header Styles */
-header {
-    margin-bottom: 30px; /* Reduced margin */
 }
 
 h1 {
-    color: var(--primary-brand-color);
-    font-size: 3em; /* Reduced main title size */
-    margin-bottom: 8px; /* Reduced margin */
-    font-weight: 700;
-}
-
-header p {
-    font-size: 1em; /* Reduced header paragraph size */
-    color: var(--text-color-light);
-}
-
-/* Section Styles (common for player lists and newsletter) */
-section {
-    padding: 25px; /* Reduced section padding */
-    border-radius: 6px; /* Slightly less rounded corners */
-    margin-bottom: 25px; /* Reduced margin */
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.04); /* Even more subtle shadow for sections */
+    color: #DC0000; /* Arsenal Red */
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 h2 {
-    font-size: 2em; /* Reduced subheading size */
-    margin-top: 0;
-    margin-bottom: 15px; /* Reduced margin */
-    font-weight: 600;
+    color: #004D98; /* Arsenal Blue */
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
-/* Specific Player Section Styles */
-.players-in-section {
-    background-color: var(--background-color-players-in);
-}
-
-.players-in-section h2 {
-    color: var(--secondary-brand-color);
-}
-
-.players-out-section {
-    background-color: var(--background-color-players-out);
-}
-
-.players-out-section h2 {
-    color: var(--primary-brand-color);
-}
-
-/* List Styles for players */
-ul {
-    list-style: none;
+.players-section ul {
+    list-style: none; /* No bullets */
     padding: 0;
-    margin: 0;
 }
 
-li {
-    background-color: var(--background-color-container);
-    border: 1px solid #eeeeee;
-    margin-bottom: 8px; /* Reduced margin */
-    padding: 12px; /* Reduced padding */
-    border-radius: 4px; /* Slightly less rounded */
-    font-size: 1em; /* Reduced list item font size */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--text-color-dark);
+.players-section li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.1em;
 }
 
-li:last-child {
-    margin-bottom: 0;
-}
-
-/* Newsletter Section Styles */
 .newsletter-section {
-    background-color: var(--background-color-newsletter);
-    border: 1px solid #dddddd;
-}
-
-.newsletter-section h2 {
-    color: var(--text-color-dark);
+    background-color: #e0f2f7; /* Light blue for newsletter section */
+    padding: 25px;
+    margin-top: 40px;
+    border-radius: 8px;
+    border: 1px solid #cceeff;
 }
 
 .newsletter-section p {
-    font-size: 1em; /* Adjusted paragraph size */
-    margin-bottom: 20px; /* Reduced margin */
-    color: var(--text-color-light);
+    font-size: 1.1em;
+    margin-bottom: 20px;
 }
 
-/* Substack Embed Container (for centering the iframe) */
-.substack-embed-container {
-    display: flex;
-    justify-content: center; /* Center the iframe */
-    margin-top: 20px; /* Add some space above it */
-    margin-bottom: 10px; /* Add some space below it */
+.button {
+    display: inline-block;
+    background-color: #004D98; /* Arsenal Blue */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
 }
 
-.substack-embed-container iframe {
-    max-width: 100%; /* Ensure it doesn't overflow its parent */
-    height: auto; /* Adjust height proportionally */
-    min-height: 250px; /* Ensure a minimum height for the embed */
-    border-radius: 8px; /* Add rounded corners to the iframe */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+.button:hover {
+    background-color: #DC0000; /* Arsenal Red on hover */
 }
 
-
-/* Footer Styles */
 footer {
-    margin-top: 30px; /* Reduced margin */
-    padding-top: 15px; /* Reduced padding */
-    border-top: 1px solid #e0e0e0;
-    color: var(--text-color-light);
-    font-size: 0.85em; /* Slightly smaller footer text */
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
 }
